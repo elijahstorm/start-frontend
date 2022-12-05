@@ -93,12 +93,12 @@ class RecentNotifications extends StatelessWidget {
 
   Widget _buildNotificationItem(
     BuildContext context,
-    NotificationContent notification,
+    NotificationContent classes,
   ) =>
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          notification.hasStory
+          classes.hasStory
               ? Container(
                   width: _notificationContainerSize,
                   height: _notificationContainerSize,
@@ -124,7 +124,7 @@ class RecentNotifications extends StatelessWidget {
                         ),
                       ),
                       child: FutureBuilder<UserContent?>(
-                        future: notification.from,
+                        future: classes.from,
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
                             return UserContent.placeholderIcon;
@@ -148,7 +148,7 @@ class RecentNotifications extends StatelessWidget {
                   ),
                   child: ClipRRect(
                     child: FutureBuilder<UserContent?>(
-                      future: notification.from,
+                      future: classes.from,
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
                           return UserContent.placeholderIcon;
@@ -168,7 +168,7 @@ class RecentNotifications extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        notification.name,
+                        classes.name,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
@@ -180,7 +180,7 @@ class RecentNotifications extends StatelessWidget {
                     ),
                     Text(
                       Language.timeSinceDate(
-                        notification.date,
+                        classes.date,
                         short: true,
                       ),
                       style: TextStyle(
@@ -191,13 +191,13 @@ class RecentNotifications extends StatelessWidget {
                   ],
                 ),
                 Text(
-                  notification.caption,
+                  classes.caption,
                 ),
               ],
             ),
           ),
           const SizedBox(width: Constants.defaultPadding),
-          notification.postImage != null
+          classes.postImage != null
               ? Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
@@ -205,11 +205,11 @@ class RecentNotifications extends StatelessWidget {
                   width: _notificationContainerSize,
                   height: _notificationContainerSize,
                   child: ClipRRect(
-                    child: notification.postImage,
+                    child: classes.postImage,
                   ),
                 )
               : GestureDetector(
-                  onTap: () async => (await notification.from)?.follow(),
+                  onTap: () async => (await classes.from)?.follow(),
                   child: Container(
                     height: 35,
                     width: 110,

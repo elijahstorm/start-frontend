@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
     ));
 
     loading = false;
-    
+
     if (!mounted) return;
     await Navigator.of(context).push(MaterialPageRoute(
       builder: (context) => Material(

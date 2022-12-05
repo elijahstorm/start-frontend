@@ -78,3 +78,4 @@ flutter:
     - assets/icons/
     - assets/icons/brands/
     - assets/imports/
+    - assets/imports/classes/

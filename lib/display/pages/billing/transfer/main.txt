@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
             ),
             actions: [
               IconButton(
-                icon: Icon(Iconsax.notification, color: Colors.grey.shade700),
+                icon: Icon(Iconsax.classes, color: Colors.grey.shade700),
                 onPressed: () {print('todo for sure');},
               ),
               IconButton(

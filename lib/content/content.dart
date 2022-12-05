@@ -7,7 +7,7 @@ enum CONTENT {
   none,
   dashboard,
   todo,
-  notification,
+  classes,
   file,
   team,
   user,

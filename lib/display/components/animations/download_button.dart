@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 enum DownloadStatus {
   notDownloaded,
   fetchingDownload,
@@ -24,7 +23,7 @@ class SimulatedDownloadController extends DownloadController
     DownloadStatus downloadStatus = DownloadStatus.notDownloaded,
     double progress = 0.0,
     required VoidCallback onOpenDownload,
-  })   : _downloadStatus = downloadStatus,
+  })  : _downloadStatus = downloadStatus,
         _progress = progress,
         _onOpenDownload = onOpenDownload;
 

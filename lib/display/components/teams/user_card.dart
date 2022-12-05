@@ -60,47 +60,45 @@ class UserCard extends StatelessWidget {
             FutureBuilder<bool>(
               future: user.following(),
               builder: (context, snapshot) => snapshot.hasData
-                  ? StatefulBuilder(
-                    builder: (context, setState) {
+                  ? StatefulBuilder(builder: (context, setState) {
                       return GestureDetector(
-                          onTap: () => setState(
-                            () => snapshot.data!
-                                ? user.follow(
-                                    followType: FollowType.unfollow,
-                                  )
-                                : user.follow(),
-                          ),
-                          child: AnimatedContainer(
-                            height: 35,
-                            width: 110,
-                            duration: const Duration(milliseconds: 300),
-                            decoration: BoxDecoration(
+                        onTap: () => setState(
+                          () => snapshot.data!
+                              ? user.follow(
+                                  followType: FollowType.unfollow,
+                                )
+                              : user.follow(),
+                        ),
+                        child: AnimatedContainer(
+                          height: 35,
+                          width: 110,
+                          duration: const Duration(milliseconds: 300),
+                          decoration: BoxDecoration(
+                            color: snapshot.data!
+                                ? Theme.of(context).primaryColor
+                                : Colors.grey.withOpacity(0.05),
+                            borderRadius: BorderRadius.circular(5),
+                            border: Border.all(
                               color: snapshot.data!
-                                  ? Theme.of(context).primaryColor
-                                  : Colors.grey.withOpacity(0.05),
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                color: snapshot.data!
-                                    ? Colors.transparent
-                                    : Colors.grey.shade700,
-                              ),
+                                  ? Colors.transparent
+                                  : Colors.grey.shade700,
                             ),
-                            child: Center(
-                              child: Text(
-                                snapshot.data!
-                                    ? Language.unfollowButton
-                                    : Language.followButton,
-                                style: TextStyle(
-                                  color: snapshot.data!
-                                      ? Theme.of(context).scaffoldBackgroundColor
-                                      : null,
-                                ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              snapshot.data!
+                                  ? Language.unfollowButton
+                                  : Language.followButton,
+                              style: TextStyle(
+                                color: snapshot.data!
+                                    ? Theme.of(context).scaffoldBackgroundColor
+                                    : null,
                               ),
                             ),
                           ),
-                        );
-                    }
-                  )
+                        ),
+                      );
+                    })
                   : const LoadingButton(),
             ),
           ],

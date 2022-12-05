@@ -111,11 +111,12 @@ class Language {
   static const String alertColorPrompt = 'Choose a new COLOR';
   static const String alertDateChangePrompt = 'Change the task date';
 
-  static const String appNavBarTitlesHome = 'activity';
-  static const String appNavBarTitlesTeams = 'teams';
-  static const String appNavBarTitlesCalendar = 'calendar';
-  static const String appNavBarTitlesNotos = 'likes';
-  static const String appNavBarTitlesProfile = 'profile';
+  static const String appNavBarTitlesHome = 'Feed';
+  static const String appNavBarTitlesTeams = 'Meetup';
+  static const String appNavBarTitlesCalendar = 'Play';
+  static const String appNavBarTitlesNotos = 'Notifications';
+  static const String appNavBarTitlesClasses = 'Classes';
+  static const String appNavBarTitlesProfile = 'Profile';
 
   static const String januaryName = 'january';
   static const String februaryName = 'february';
@@ -135,6 +136,8 @@ class Language {
   static const String appScreenHeaderRecentNotos = 'recent notifications';
   static const String appScreenHeaderYourTeam = 'your teams';
   static const String appScreenHeaderYourCircle = 'in your circle';
+
+  static const String appScreenHeaderAllClasses = 'All Classes';
 
   static const String filesName = 'File';
   static const String appScreenHeaderMyFiles = 'My Files';

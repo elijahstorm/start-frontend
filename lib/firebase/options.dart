@@ -61,7 +61,8 @@ class DefaultFirebaseOptions {
     projectId: 'haja-project',
     databaseURL: 'https://haja-project-default-rtdb.firebaseio.com',
     storageBucket: 'haja-project.appspot.com',
-    iosClientId: '965643333791-8ktctasckkuj6agjsncea0emb1i3qbv9.apps.googleusercontent.com',
+    iosClientId:
+        '965643333791-8ktctasckkuj6agjsncea0emb1i3qbv9.apps.googleusercontent.com',
     iosBundleId: 'com.elistorm.haja',
   );
 
@@ -72,7 +73,8 @@ class DefaultFirebaseOptions {
     projectId: 'haja-project',
     databaseURL: 'https://haja-project-default-rtdb.firebaseio.com',
     storageBucket: 'haja-project.appspot.com',
-    iosClientId: '965643333791-8ktctasckkuj6agjsncea0emb1i3qbv9.apps.googleusercontent.com',
+    iosClientId:
+        '965643333791-8ktctasckkuj6agjsncea0emb1i3qbv9.apps.googleusercontent.com',
     iosBundleId: 'com.elistorm.haja',
   );
 }

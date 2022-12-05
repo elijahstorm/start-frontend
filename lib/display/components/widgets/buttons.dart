@@ -84,7 +84,8 @@ class _FollowButton extends State<FollowButton> {
                 : TextButton(
                     onPressed: () => setState(() => widget.user.follow()),
                     style: TextButton.styleFrom(
-                      foregroundColor: Theme.of(context).scaffoldBackgroundColor,
+                      foregroundColor:
+                          Theme.of(context).scaffoldBackgroundColor,
                       backgroundColor: Theme.of(context).primaryColor,
                       minimumSize: const Size(
                         Constants.defaultPadding * 3,

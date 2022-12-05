@@ -13,7 +13,7 @@ class NotificationContent extends ContentContainer {
 
   @override
   String get collection => collectionName;
-  final contentType = CONTENT.notification;
+  final contentType = CONTENT.classes;
 
   @override
   bool get privateData => true;

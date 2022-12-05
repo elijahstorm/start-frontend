@@ -60,10 +60,7 @@ class TodoContent extends ContentContainer {
   }
 
   String get shareLink =>
-      '${Constants.dataLinkUri}$collectionName/${isTeam
-        ? sourceId
-        : AuthApi.activeUser
-      }-${isTeam ? '1' : '0'}/$id';
+      '${Constants.dataLinkUri}$collectionName/${isTeam ? sourceId : AuthApi.activeUser}-${isTeam ? '1' : '0'}/$id';
 
   Future<bool> toggleLiked() async {
     like = !await liked;

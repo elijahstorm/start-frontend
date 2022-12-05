@@ -59,6 +59,7 @@ class Themes {
           shape: RoundedRectangleBorder(),
           textTheme: ButtonTextTheme.primary,
         ),
+        iconTheme: const IconThemeData(color: Constants.primaryColorDark),
         brightness: Brightness.light,
         fontFamily: 'Roboto',
         snackBarTheme: const SnackBarThemeData(

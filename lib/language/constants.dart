@@ -14,6 +14,10 @@ class Constants {
     Color(0xFF62ca9c),
   ];
 
+  static const Color chipTransparent = Color(0x2E969696);
+  static const Color chipBackground = Color(0xFFEDEDED);
+  static const Color chipText = Color(0xFF474747);
+
   static const Color primaryColorLight = Color(0xFFFF6060);
   static const Color secondaryColorLight = Color.fromARGB(255, 96, 187, 223);
   static const Color cardColorLight = Color(0xFFE2F2FF);
@@ -39,7 +43,7 @@ class Constants {
   static const Color snackbarBackground = Color(0xFF323232);
   static const Color snackbarText = Color(0xFFCFCFCF);
 
-  static const double defaultPadding = 24.0;
+  static const double defaultPadding = 16.0;
   static const double defaultCardRadius = 15.0;
   static const double textSizeRegular = 16.0;
   static const double textSizeButton = 18.0;

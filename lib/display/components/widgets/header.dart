@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:start_app_frontend/language/language.dart';
 import 'package:provider/provider.dart';
 
+import 'package:start_app_frontend/display/components/widgets/avatars.dart';
 import 'package:start_app_frontend/display/pages/search/page.dart';
 import 'package:start_app_frontend/display/pages/debug/page.dart';
 import 'package:start_app_frontend/login/user_state.dart';
@@ -108,26 +109,31 @@ class _HeaderState extends State<Header> with TickerProviderStateMixin {
     return Column(
       children: [
         Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            if (!Responsive.isMobile(context))
-              Text(
-                widget.title,
-                style: Theme.of(context).textTheme.headline6,
-              ),
-            if (!Responsive.isMobile(context))
-              Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-            Image.asset(
-              Constants.logoTitleAsset,
-              height: Constants.defaultPadding * 1.5,
+            Text(
+              widget.title,
+              style: Theme.of(context).textTheme.headline5?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
-            const Expanded(
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: Constants.defaultPadding,
-                  bottom: 4.0,
+            Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
+            const SearchField(),
+            const SizedBox(width: Constants.defaultPadding),
+            CircleOverlappableAvatar(
+              size: Constants.defaultPadding * 2,
+              display: Container(
+                color: Constants.todoColorOptions[3],
+                child: Center(
+                  child: Image.asset(
+                    'assets/imports/avatar-1.png',
+                    fit: BoxFit.fill,
+                    errorBuilder: (context, _, __) => Image.asset(
+                      Constants.placeholderUserIcon,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
                 ),
-                child: SearchField(),
               ),
             ),
           ],
@@ -138,80 +144,23 @@ class _HeaderState extends State<Header> with TickerProviderStateMixin {
   }
 }
 
-class SearchField extends StatefulWidget {
+class SearchField extends StatelessWidget {
   const SearchField({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<SearchField> createState() => _StateSearchField();
-}
-
-class _StateSearchField extends State<SearchField> {
-  final TextEditingController _controller = TextEditingController();
-
-  @override
-  void initState() {
-    super.initState();
-    _lastInteraction = DateTime.now().subtract(Duration(seconds: _timeout));
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  final int _timeout = 5;
-  DateTime _lastInteraction = DateTime.now();
-  bool get _rejectChangeState {
-    Duration timeSince = DateTime.now().difference(_lastInteraction);
-
-    return timeSince.inSeconds < _timeout;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Hero(
-      tag: 'searchBar',
-      child: SizedBox(
-        height: 20,
-        child: TextField(
-          onChanged: (value) {
-            if (_rejectChangeState) return;
-
-            _lastInteraction = DateTime.now();
-
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => SearchPage(
-                  initialSearchInput: value,
-                ),
-              ),
-            );
-          },
-          controller: _controller,
-          decoration: InputDecoration(
-            hintText: Language.searchPrompt,
-            border: const OutlineInputBorder(
-              borderSide: BorderSide.none,
-            ),
-            contentPadding: EdgeInsets.zero,
-            suffixIcon: InkWell(
-              onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  SearchPage.routeName,
-                );
-              },
-              child: const Icon(
-                Icons.search,
-              ),
-            ),
-          ),
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(
+            context,
+            SearchPage.routeName,
+          );
+        },
+        child: Icon(
+          Icons.search,
+          color: Theme.of(context).textTheme.bodyText1?.color,
+          size: Constants.defaultPadding * 2,
         ),
-      ),
-    );
-  }
+      );
 }

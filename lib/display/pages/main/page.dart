@@ -13,7 +13,7 @@ import 'package:start_app_frontend/display/pages/main/components/navbar_holder.d
 import 'package:start_app_frontend/display/screens/calendar/screen.dart';
 import 'package:start_app_frontend/display/screens/stats/screen.dart';
 import 'package:start_app_frontend/display/screens/teams/screen.dart';
-import 'package:start_app_frontend/display/screens/notification/screen.dart';
+import 'package:start_app_frontend/display/screens/classes/screen.dart';
 import 'package:start_app_frontend/display/screens/profile/screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -28,19 +28,26 @@ class MainScreen extends StatefulWidget {
 class _ScreenManagerState extends State<MainScreen> {
   ValueNotifier<String> _stateIndexNotifier = ValueNotifier('Dashboard');
 
-  final int _defaultScreen = 2;
+  final int _defaultScreen = 0;
   final List<NavbarDataHolder> _navbarStates = [
+    NavbarDataHolder(
+      name: ClassesScreen.screenName,
+      child: const ClassesScreen(),
+      icon: Icons.home_rounded,
+      title: Language.appNavBarTitlesClasses,
+      color: (context) => Colors.pink,
+    ),
     NavbarDataHolder(
       name: CalendarScreen.screenName,
       child: const CalendarScreen(),
-      icon: Icons.event_available,
+      icon: Icons.games_outlined,
       title: Language.appNavBarTitlesCalendar,
       color: (context) => Theme.of(context).colorScheme.secondary,
     ),
     NavbarDataHolder(
       name: StatsScreen.screenName,
       child: const StatsScreen(),
-      icon: Icons.query_stats,
+      icon: Icons.menu,
       title: Language.appNavBarTitlesHome,
       color: (context) => Colors.amber,
     ),
@@ -56,21 +63,14 @@ class _ScreenManagerState extends State<MainScreen> {
           color: Theme.of(context).primaryColor,
         ),
       ),
-      icon: Icons.group,
+      icon: Icons.pin_drop_outlined,
       title: Language.appNavBarTitlesTeams,
       color: (context) => Theme.of(context).primaryColor,
     ),
     NavbarDataHolder(
-      name: NotificationScreen.screenName,
-      child: const NotificationScreen(),
-      icon: Icons.favorite_border,
-      title: Language.appNavBarTitlesNotos,
-      color: (context) => Colors.pink,
-    ),
-    NavbarDataHolder(
       name: ProfileScreen.screenName,
       child: const ProfileScreen(),
-      icon: Icons.person,
+      icon: Icons.person_outline,
       title: Language.appNavBarTitlesProfile,
       color: (context) => Colors.teal,
     ),
@@ -110,7 +110,7 @@ class _ScreenManagerState extends State<MainScreen> {
         key: context.read<MenuController>().scaffoldKey,
         bottomNavigationBar: Responsive.isDesktop(context)
             ? null
-            : HajaSalomonNavbar(
+            : StartAppNavbar(
                 stateIndex: _stateIndexNotifier,
                 navbarStates: _navbarStates,
               ),
