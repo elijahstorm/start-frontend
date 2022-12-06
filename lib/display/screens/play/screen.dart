@@ -27,7 +27,7 @@ class PlayScreen extends StatelessWidget {
             ),
           ],
           child: const ResponsiveScreen(
-            header: Language.appScreenHeaderPlay,
+            header: Language.appScreenHeaderProfile,
             primaryContent: AllPlayColumn(),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/display/components/teams/logout_button.dart';
+import 'package:start_app_frontend/display/components/profile/profile_column.dart';
+import 'package:start_app_frontend/display/components/profile/temp_profile_content.dart';
 import 'package:start_app_frontend/language/language.dart';
 import 'package:provider/provider.dart';
 
@@ -9,9 +10,6 @@ import 'package:start_app_frontend/content/dashboard/cache.dart';
 import 'package:start_app_frontend/content/users/cache.dart';
 import 'package:start_app_frontend/content/teams/cache.dart';
 import 'package:start_app_frontend/firebase/auth.dart';
-
-import 'package:start_app_frontend/display/components/teams/user_profile_dash.dart';
-import 'package:start_app_frontend/display/components/teams/our_team_members.dart';
 
 class ProfileScreen extends StatelessWidget {
   static const screenName = 'profile';
@@ -37,9 +35,22 @@ class ProfileScreen extends StatelessWidget {
         ],
         child: const ResponsiveScreen(
           header: Language.appNavBarTitlesProfile,
-          primaryContent: DashboardProfileDisplay(),
-          sideContent: OurTeamMembers(),
-          secondaryContent: LogoutButton(),
+          icon: Icons.settings,
+          primaryContent: ProfileColumn(
+            profile: ProfileContent(
+              image: 'assets/imports/avatar-1.png',
+              name: 'eli',
+              userHandle: '@iamthebest',
+              email: 'anna1234@gmail.com',
+              location: 'Bangkok, Thailand',
+              posts: 50,
+              followers: 402,
+              following: 224,
+              messages: 2,
+              private: false,
+              premium: false,
+            ),
+          ),
         ),
       ),
     );

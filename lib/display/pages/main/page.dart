@@ -82,7 +82,8 @@ class _ScreenManagerState extends State<MainScreen> {
     super.initState();
     if (_stateIndexNotifier.value == 'unset') {
       _stateIndexNotifier =
-          ValueNotifier(_navbarStates[_defaultScreen + 1].name);
+          // ValueNotifier(_navbarStates[_defaultScreen + 2].name);
+          ValueNotifier(_navbarStates[_defaultScreen + 3].name);
     }
   }
 

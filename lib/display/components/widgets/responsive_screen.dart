@@ -7,21 +7,18 @@ import 'package:start_app_frontend/language/constants.dart';
 
 class ResponsiveScreen extends StatelessWidget {
   final String header;
-  final Widget? primaryContent,
-      secondaryContent,
-      sideContent,
-      mobileHeaderContent;
-  final Widget Function(
-    BuildContext,
-    String, {
-    Widget? primaryContent,
-    Widget? secondaryContent,
-    Widget? sideContent,
-    Widget? mobileHeaderContent,
-  }) _builder;
+  final Widget? primaryContent;
+  final Widget? secondaryContent;
+  final Widget? sideContent;
+  final Widget? mobileHeaderContent;
+  final IconData icon;
+  final Function? iconAction;
+  final Widget Function(PageData) _builder;
 
   const ResponsiveScreen({
     this.header = '${Language.appName}: ${Language.appSubtitle}',
+    this.icon = Icons.search,
+    this.iconAction,
     this.primaryContent,
     this.secondaryContent,
     this.sideContent,
@@ -32,6 +29,8 @@ class ResponsiveScreen extends StatelessWidget {
 
   const ResponsiveScreen.thirds({
     this.header = '${Language.appName}: ${Language.appSubtitle}',
+    this.icon = Icons.search,
+    this.iconAction,
     this.primaryContent,
     this.secondaryContent,
     this.sideContent,
@@ -42,6 +41,8 @@ class ResponsiveScreen extends StatelessWidget {
 
   const ResponsiveScreen.landscapeFriendly({
     this.header = '${Language.appName}: ${Language.appSubtitle}',
+    this.icon = Icons.search,
+    this.iconAction,
     this.primaryContent,
     this.secondaryContent,
     this.sideContent,
@@ -50,15 +51,7 @@ class ResponsiveScreen extends StatelessWidget {
   })  : _builder = drawLandscape,
         super(key: key);
 
-  static Widget drawPanels(
-    BuildContext context,
-    String header, {
-    Widget? primaryContent,
-    Widget? secondaryContent,
-    Widget? sideContent,
-    Widget? mobileHeaderContent,
-  }) =>
-      SingleChildScrollView(
+  static Widget drawPanels(PageData page) => SingleChildScrollView(
         padding: const EdgeInsets.symmetric(
           vertical: Constants.defaultPadding,
         ),
@@ -68,14 +61,19 @@ class ResponsiveScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(
                 horizontal: Constants.defaultPadding,
               ),
-              child: Header(header),
+              child: Header(
+                page.header,
+                icon: page.icon,
+                action: page.iconAction,
+              ),
             ),
-            if (mobileHeaderContent != null && Responsive.isMobile(context))
+            if (page.mobileHeaderContent != null &&
+                Responsive.isMobile(page.context))
               Padding(
                 padding: const EdgeInsets.only(
                   top: Constants.defaultPadding,
                 ),
-                child: mobileHeaderContent,
+                child: page.mobileHeaderContent,
               ),
             const SizedBox(
               height: Constants.defaultPadding,
@@ -88,22 +86,22 @@ class ResponsiveScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       const Divider(),
-                      primaryContent ?? Container(),
+                      page.primaryContent ?? Container(),
                       const SizedBox(height: Constants.defaultPadding),
-                      secondaryContent ?? Container(),
-                      if (Responsive.isMobile(context))
+                      page.secondaryContent ?? Container(),
+                      if (Responsive.isMobile(page.context))
                         const SizedBox(height: Constants.defaultPadding),
-                      if (Responsive.isMobile(context))
-                        sideContent ?? Container(),
+                      if (Responsive.isMobile(page.context))
+                        page.sideContent ?? Container(),
                     ],
                   ),
                 ),
-                if (!Responsive.isMobile(context))
+                if (!Responsive.isMobile(page.context))
                   const SizedBox(width: Constants.defaultPadding),
-                if (!Responsive.isMobile(context))
+                if (!Responsive.isMobile(page.context))
                   Expanded(
                     flex: 2,
-                    child: sideContent ?? Container(),
+                    child: page.sideContent ?? Container(),
                   ),
               ],
             ),
@@ -111,20 +109,18 @@ class ResponsiveScreen extends StatelessWidget {
         ),
       );
 
-  static Widget drawLandscape(
-    BuildContext context,
-    String header, {
-    Widget? primaryContent,
-    Widget? secondaryContent,
-    Widget? sideContent,
-    Widget? mobileHeaderContent,
-  }) {
-    return MediaQuery.of(context).orientation == Orientation.landscape
+  static Widget drawLandscape(PageData page) {
+    return MediaQuery.of(page.context).orientation == Orientation.landscape
         ? Padding(
             padding: const EdgeInsets.all(Constants.defaultPadding),
             child: Column(
               children: [
-                if (header != '') Header(header),
+                if (page.header != '')
+                  Header(
+                    page.header,
+                    icon: page.icon,
+                    action: page.iconAction,
+                  ),
                 const SizedBox(height: Constants.defaultPadding),
                 Expanded(
                   child: Row(
@@ -136,9 +132,9 @@ class ResponsiveScreen extends StatelessWidget {
                           scrollDirection: Axis.vertical,
                           child: Column(
                             children: [
-                              if (Responsive.isMobile(context))
-                                mobileHeaderContent ?? Container(),
-                              primaryContent ?? Container(),
+                              if (Responsive.isMobile(page.context))
+                                page.mobileHeaderContent ?? Container(),
+                              page.primaryContent ?? Container(),
                             ],
                           ),
                         ),
@@ -150,7 +146,7 @@ class ResponsiveScreen extends StatelessWidget {
                         flex: 4,
                         child: SingleChildScrollView(
                           scrollDirection: Axis.vertical,
-                          child: secondaryContent ?? Container(),
+                          child: page.secondaryContent ?? Container(),
                         ),
                       ),
                     ],
@@ -160,24 +156,21 @@ class ResponsiveScreen extends StatelessWidget {
             ),
           )
         : drawPanels(
-            context,
-            header,
-            primaryContent: primaryContent,
-            secondaryContent: secondaryContent,
-            sideContent: sideContent,
-            mobileHeaderContent: mobileHeaderContent,
+            PageData(
+              page.context,
+              page.header,
+              icon: page.icon,
+              iconAction: page.iconAction,
+              primaryContent: page.primaryContent,
+              secondaryContent: page.secondaryContent,
+              sideContent: page.sideContent,
+              mobileHeaderContent: page.mobileHeaderContent,
+            ),
           );
   }
 
-  static Widget drawThirds(
-    BuildContext context,
-    String header, {
-    Widget? primaryContent,
-    Widget? secondaryContent,
-    Widget? sideContent,
-    Widget? mobileHeaderContent,
-  }) {
-    if (Responsive.isMobile(context)) {
+  static Widget drawThirds(PageData page) {
+    if (Responsive.isMobile(page.context)) {
       return SingleChildScrollView(
         padding: const EdgeInsets.symmetric(
           vertical: Constants.defaultPadding,
@@ -188,35 +181,39 @@ class ResponsiveScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(
                 horizontal: Constants.defaultPadding,
               ),
-              child: Header(header),
+              child: Header(
+                page.header,
+                icon: page.icon,
+                action: page.iconAction,
+              ),
             ),
             const SizedBox(height: Constants.defaultPadding),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: Constants.defaultPadding,
               ),
-              child: mobileHeaderContent ?? Container(),
+              child: page.mobileHeaderContent ?? Container(),
             ),
             const SizedBox(height: Constants.defaultPadding),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: Constants.defaultPadding,
               ),
-              child: primaryContent ?? Container(),
+              child: page.primaryContent ?? Container(),
             ),
             const SizedBox(height: Constants.defaultPadding),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: Constants.defaultPadding,
               ),
-              child: secondaryContent ?? Container(),
+              child: page.secondaryContent ?? Container(),
             ),
             const SizedBox(height: Constants.defaultPadding),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: Constants.defaultPadding,
               ),
-              child: sideContent ?? Container(),
+              child: page.sideContent ?? Container(),
             ),
           ],
         ),
@@ -226,7 +223,11 @@ class ResponsiveScreen extends StatelessWidget {
       padding: const EdgeInsets.all(Constants.defaultPadding),
       child: Column(
         children: [
-          Header(header),
+          Header(
+            page.header,
+            icon: page.icon,
+            action: page.iconAction,
+          ),
           const SizedBox(height: Constants.defaultPadding),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -235,7 +236,7 @@ class ResponsiveScreen extends StatelessWidget {
                 flex: 3,
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.all(Constants.defaultPadding),
-                  child: primaryContent ?? Container(),
+                  child: page.primaryContent ?? Container(),
                 ),
               ),
               const SizedBox(width: Constants.defaultPadding),
@@ -243,7 +244,7 @@ class ResponsiveScreen extends StatelessWidget {
                 flex: 3,
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.all(Constants.defaultPadding),
-                  child: secondaryContent ?? Container(),
+                  child: page.secondaryContent ?? Container(),
                 ),
               ),
               const SizedBox(width: Constants.defaultPadding),
@@ -251,7 +252,7 @@ class ResponsiveScreen extends StatelessWidget {
                 flex: 3,
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.all(Constants.defaultPadding),
-                  child: sideContent ?? Container(),
+                  child: page.sideContent ?? Container(),
                 ),
               ),
             ],
@@ -264,14 +265,38 @@ class ResponsiveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: _builder(
+      child: _builder(PageData(
         context,
         header,
+        icon: icon,
+        iconAction: iconAction,
         primaryContent: primaryContent,
         secondaryContent: secondaryContent,
         sideContent: sideContent,
         mobileHeaderContent: mobileHeaderContent,
-      ),
+      )),
     );
   }
+}
+
+class PageData {
+  final BuildContext context;
+  final String header;
+  final IconData icon;
+  final Function? iconAction;
+  final Widget? primaryContent;
+  final Widget? secondaryContent;
+  final Widget? sideContent;
+  final Widget? mobileHeaderContent;
+
+  const PageData(
+    this.context,
+    this.header, {
+    required this.icon,
+    this.iconAction,
+    this.primaryContent,
+    this.secondaryContent,
+    this.sideContent,
+    this.mobileHeaderContent,
+  });
 }

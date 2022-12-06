@@ -12,9 +12,13 @@ import 'package:start_app_frontend/language/constants.dart';
 
 class Header extends StatefulWidget {
   final String title;
+  final IconData icon;
+  final Function? action;
 
   const Header(
     this.title, {
+    required this.icon,
+    this.action,
     Key? key,
   }) : super(key: key);
 
@@ -118,7 +122,10 @@ class _HeaderState extends State<Header> with TickerProviderStateMixin {
                   ),
             ),
             Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-            const SearchField(),
+            HeaderAction(
+              icon: widget.icon,
+              action: widget.action,
+            ),
             const SizedBox(width: Constants.defaultPadding),
             CircleOverlappableAvatar(
               size: Constants.defaultPadding * 2,
@@ -144,21 +151,26 @@ class _HeaderState extends State<Header> with TickerProviderStateMixin {
   }
 }
 
-class SearchField extends StatelessWidget {
-  const SearchField({
+class HeaderAction extends StatelessWidget {
+  final IconData icon;
+  final Function? action;
+
+  const HeaderAction({
+    required this.icon,
+    this.action,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-        onTap: () {
-          Navigator.pushNamed(
-            context,
-            SearchPage.routeName,
-          );
-        },
+        onTap: () => action == null
+            ? () => Navigator.pushNamed(
+                  context,
+                  SearchPage.routeName,
+                )
+            : action!(),
         child: Icon(
-          Icons.search,
+          icon,
           color: Theme.of(context).textTheme.bodyText1?.color,
           size: Constants.defaultPadding * 2,
         ),
