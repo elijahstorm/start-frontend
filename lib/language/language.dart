@@ -138,6 +138,7 @@ class Language {
   static const String appScreenHeaderYourCircle = 'in your circle';
 
   static const String appScreenHeaderAllClasses = 'All Classes';
+  static const String appScreenHeaderPlay = 'Dance Games';
 
   static const String filesName = 'File';
   static const String appScreenHeaderMyFiles = 'My Files';

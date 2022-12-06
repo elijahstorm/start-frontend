@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:start_app_frontend/content/teams/content.dart';
+import 'package:start_app_frontend/display/screens/play/screen.dart';
 import 'package:start_app_frontend/language/constants.dart';
 import 'package:start_app_frontend/language/language.dart';
 import 'package:provider/provider.dart';
@@ -26,7 +27,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _ScreenManagerState extends State<MainScreen> {
-  ValueNotifier<String> _stateIndexNotifier = ValueNotifier('Dashboard');
+  ValueNotifier<String> _stateIndexNotifier = ValueNotifier('unset');
 
   final int _defaultScreen = 0;
   final List<NavbarDataHolder> _navbarStates = [
@@ -39,7 +40,7 @@ class _ScreenManagerState extends State<MainScreen> {
     ),
     NavbarDataHolder(
       name: CalendarScreen.screenName,
-      child: const CalendarScreen(),
+      child: const PlayScreen(),
       icon: Icons.games_outlined,
       title: Language.appNavBarTitlesCalendar,
       color: (context) => Theme.of(context).colorScheme.secondary,
@@ -79,7 +80,10 @@ class _ScreenManagerState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
-    _stateIndexNotifier = ValueNotifier(_navbarStates[_defaultScreen].name);
+    if (_stateIndexNotifier.value == 'unset') {
+      _stateIndexNotifier =
+          ValueNotifier(_navbarStates[_defaultScreen + 1].name);
+    }
   }
 
   Widget _decideInteriorBody() {

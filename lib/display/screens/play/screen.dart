@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:start_app_frontend/display/components/play/all_play_column.dart';
 import 'package:start_app_frontend/language/language.dart';
 import 'package:provider/provider.dart';
 
@@ -8,13 +9,10 @@ import 'package:start_app_frontend/content/notifications/cache.dart';
 import 'package:start_app_frontend/content/users/cache.dart';
 import 'package:start_app_frontend/firebase/auth.dart';
 
-import 'package:start_app_frontend/display/components/teams/user_recommended_friends.dart';
-import 'package:start_app_frontend/display/components/notifications/recent_notifications.dart';
+class PlayScreen extends StatelessWidget {
+  static const screenName = 'dance_play';
 
-class NotificationScreen extends StatelessWidget {
-  static const screenName = 'classes';
-
-  const NotificationScreen({
+  const PlayScreen({
     Key? key,
   }) : super(key: key);
 
@@ -29,9 +27,8 @@ class NotificationScreen extends StatelessWidget {
             ),
           ],
           child: const ResponsiveScreen(
-            header: Language.appNavBarTitlesNotos,
-            primaryContent: RecentNotifications(),
-            sideContent: UserRecommendedFriends(),
+            header: Language.appScreenHeaderPlay,
+            primaryContent: AllPlayColumn(),
           ),
         ),
       );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/display/components/classes/TempClassContent.dart';
+import 'package:start_app_frontend/display/components/classes/temp_class_content.dart';
 import 'package:start_app_frontend/display/components/classes/classes_row.dart';
 
 class AllClassesColumn extends StatelessWidget {
@@ -11,7 +11,6 @@ class AllClassesColumn extends StatelessWidget {
   Widget build(BuildContext context) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
-          Divider(),
           ClassesRow(
             name: 'Top 10 Hits',
             classes: [

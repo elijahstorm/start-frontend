@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:start_app_frontend/display/pages/main/components/navbar_holder.dart';
-import 'package:start_app_frontend/language/constants.dart';
 
 class StartAppNavbar extends StatefulWidget {
   final ValueNotifier stateIndex;
@@ -19,7 +18,7 @@ class StartAppNavbar extends StatefulWidget {
 
 class _StartAppNavbarState extends State<StartAppNavbar> {
   void _updateState(int index) {
-    setState(() => widget.stateIndex.value = widget.navbarStates[index].name);
+    widget.stateIndex.value = widget.navbarStates[index].name;
   }
 
   int get _currentIndex {

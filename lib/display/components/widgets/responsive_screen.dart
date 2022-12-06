@@ -87,6 +87,7 @@ class ResponsiveScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
+                      const Divider(),
                       primaryContent ?? Container(),
                       const SizedBox(height: Constants.defaultPadding),
                       secondaryContent ?? Container(),

@@ -20,10 +20,11 @@ class Constants {
 
   static const Color primaryColorLight = Color(0xFFFF6060);
   static const Color secondaryColorLight = Color.fromARGB(255, 96, 187, 223);
-  static const Color cardColorLight = Color(0xFFE2F2FF);
+  static const Color cardColorLight = Color(0xFFF2F2F2);
   static const Color bgColorLight = Color(0xFFf8f9fa);
   static const Color textColorLight = Color(0xFF000000);
   static const Color canvasColorLight = Color(0xFFe6e4ef);
+  static const Color iconColorLight = Color(0xFF000000);
 
   static const Color primaryColorDark = Color(0xFF1E9AFE);
   static const Color secondaryColorDark = Color(0xFF60dfcd);
@@ -31,6 +32,7 @@ class Constants {
   static const Color bgColorDark = Color(0xFF061A40);
   static const Color textColorDark = Color(0xFFFFFFFF);
   static const Color canvasColorDark = Color(0xFF7E7E7E);
+  static const Color iconColorDark = Color(0xFFFFFFFF);
 
   static const Color lightShimmerLowlight = Color(0xFFF5F5F5);
   static const Color lightShimmerHighlight = Color(0xFFE0E0E0);
