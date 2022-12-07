@@ -6,21 +6,28 @@ import 'package:start_app_frontend/language/constants.dart';
 class ContentCard extends StatelessWidget {
   final String title;
   final String subtitle;
+  final IconData? prefixIcon;
   final double width;
   final double height;
   final List<Positioned> positionedChildren;
-  final Function action;
-
   final List<String> tags;
+  final Function action;
+  final TextStyle headerStyle;
+  final double subtitleSize;
 
   const ContentCard({
     required this.title,
     this.subtitle = '',
+    this.prefixIcon,
     required this.positionedChildren,
     this.tags = const [],
     this.width = 200,
     this.height = 200,
     required this.action,
+    this.headerStyle = const TextStyle(
+      fontSize: 24,
+    ),
+    this.subtitleSize = 20,
     Key? key,
   }) : super(key: key);
 
@@ -49,22 +56,40 @@ class ContentCard extends StatelessWidget {
               const SizedBox(height: Constants.defaultPadding / 2),
               Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 24,
-                ),
+                style: headerStyle,
               ),
               if (subtitle != '')
-                Container(
-                  margin:
-                      const EdgeInsets.only(top: Constants.defaultPadding / 4),
-                  child: Opacity(
-                    opacity: .7,
-                    child: Text(
-                      subtitle,
-                      style: const TextStyle(
-                        fontSize: 20,
+                Opacity(
+                  opacity: .7,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      if (prefixIcon != null)
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            right: Constants.defaultPadding / 4,
+                          ),
+                          child: Icon(
+                            prefixIcon,
+                            size: subtitleSize,
+                          ),
+                        ),
+                      Flexible(
+                        child: Container(
+                          margin: const EdgeInsets.only(
+                            top: Constants.defaultPadding / 4,
+                          ),
+                          child: Text(
+                            subtitle,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: subtitleSize,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ),
               if (tags.isNotEmpty)

@@ -18,7 +18,7 @@ class StartAppNavbar extends StatefulWidget {
 
 class _StartAppNavbarState extends State<StartAppNavbar> {
   void _updateState(int index) {
-    widget.stateIndex.value = widget.navbarStates[index].name;
+    setState(() => widget.stateIndex.value = widget.navbarStates[index].name);
   }
 
   int get _currentIndex {

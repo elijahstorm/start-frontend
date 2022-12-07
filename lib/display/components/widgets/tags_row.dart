@@ -4,29 +4,36 @@ import 'package:start_app_frontend/language/constants.dart';
 class ChipTagsRow extends StatelessWidget {
   final List<String> tags;
   final Function action;
+  final bool small;
 
   const ChipTagsRow({
     required this.tags,
     required this.action,
+    this.small = false,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Wrap(
-        children: tags
+        children: Set.from(tags)
+            .toList()
             .map(
               (tag) => GestureDetector(
                 onTap: () => action(),
                 child: Container(
-                  margin: const EdgeInsets.only(
-                    right: Constants.defaultPadding,
-                  ),
+                  margin: tags.indexOf(tag) == tags.length - 1
+                      ? EdgeInsets.zero
+                      : EdgeInsets.only(
+                          right: small
+                              ? Constants.defaultPadding / 4
+                              : Constants.defaultPadding,
+                        ),
                   child: Chip(
                     label: Text(
                       tag,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Constants.chipText,
-                        fontSize: 18,
+                        fontSize: small ? 12 : 18,
                         fontWeight: FontWeight.w400,
                       ),
                     ),

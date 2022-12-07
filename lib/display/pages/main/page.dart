@@ -47,21 +47,21 @@ class _ScreenManagerState extends State<MainScreen> {
     ),
     NavbarDataHolder(
       name: StatsScreen.screenName,
-      child: const StatsScreen(),
+      child: const ClassesScreen(),
       icon: Icons.menu,
       title: Language.appNavBarTitlesHome,
       color: (context) => Colors.amber,
     ),
     NavbarDataHolder(
-      name: TeamsScreen.screenName,
-      child: const TeamsScreen(),
+      name: MeetupScreen.screenName,
+      child: const MeetupScreen(),
       fab: (BuildContext context) => FloatingActionButton(
         onPressed: () => TeamContent.makeNewTeam(context),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Theme.of(context).primaryColor,
         child: Icon(
-          Icons.add,
-          size: Constants.defaultPadding * 1.5,
-          color: Theme.of(context).primaryColor,
+          Icons.edit,
+          size: Constants.defaultPadding * 2,
+          color: Theme.of(context).scaffoldBackgroundColor,
         ),
       ),
       icon: Icons.pin_drop_outlined,
@@ -83,7 +83,7 @@ class _ScreenManagerState extends State<MainScreen> {
     if (_stateIndexNotifier.value == 'unset') {
       _stateIndexNotifier =
           // ValueNotifier(_navbarStates[_defaultScreen + 2].name);
-          ValueNotifier(_navbarStates[_defaultScreen + 3].name);
+          ValueNotifier(_navbarStates[_defaultScreen].name);
     }
   }
 
@@ -102,8 +102,10 @@ class _ScreenManagerState extends State<MainScreen> {
       if (_navbarStates[i].name == _stateIndexNotifier.value) {
         if (_navbarStates[i].fab == null) return Container();
         return SizedBox(
-          width: Constants.defaultPadding * 2,
-          child: _navbarStates[i].fab!(context),
+          width: Constants.defaultPadding * 3,
+          child: FittedBox(
+            child: _navbarStates[i].fab!(context),
+          ),
         );
       }
     }

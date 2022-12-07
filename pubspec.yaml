@@ -81,3 +81,4 @@ flutter:
     - assets/imports/classes/
     - assets/imports/games/
     - assets/imports/profile/
+    - assets/imports/meetup/
