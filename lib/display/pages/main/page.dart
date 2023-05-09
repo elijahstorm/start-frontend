@@ -114,7 +114,7 @@ class _ScreenManagerState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        key: context.read<MenuController>().scaffoldKey,
+        key: context.read<StartMenuController>().scaffoldKey,
         bottomNavigationBar: Responsive.isDesktop(context)
             ? null
             : StartAppNavbar(

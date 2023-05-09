@@ -22,7 +22,7 @@ class UiManager extends StatefulWidget {
 class _UiManagerState extends State<UiManager> {
   Widget mainScreen(BuildContext context) => MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (context) => MenuController()),
+          ChangeNotifierProvider(create: (context) => StartMenuController()),
           ChangeNotifierProvider(create: (context) => UserState()),
         ],
         child: Consumer<UserState>(
