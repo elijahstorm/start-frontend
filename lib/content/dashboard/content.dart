@@ -129,6 +129,7 @@ class DashboardContent extends ContentContainer {
 
     return SvgPicture.asset(
       asset,
+      // colorFilter: ColorFilter.mode(Colors.red, BlendMode.srcIn)
       color: color,
     );
   }
