@@ -12,12 +12,6 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-  flutter_lints: ^2.0.0
   redux: ^5.0.0
   flutter_redux: ^0.10.0
   shared_preferences: ^2.2.1
@@ -38,6 +32,12 @@ dev_dependencies:
   firebase_core: ^2.16.0
   firebase_auth: ^4.10.0
   cloud_firestore: ^4.9.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
 
 # The following section is specific to Flutter packages.
 flutter:
