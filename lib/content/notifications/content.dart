@@ -4,9 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:start_app_frontend/content/users/content.dart';
 import 'package:start_app_frontend/firebase/auth.dart';
-
-import 'display.dart';
-import '../content.dart';
+import 'package:start_app_frontend/content/notifications/display.dart';
+import 'package:start_app_frontend/content/content.dart';
 
 class NotificationContent extends ContentContainer {
   static const String collectionName = 'notos';

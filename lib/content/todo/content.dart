@@ -4,8 +4,8 @@ import 'package:start_app_frontend/firebase/auth.dart';
 import 'package:start_app_frontend/firebase/firestore.dart';
 import 'package:start_app_frontend/language/constants.dart';
 
-import 'display.dart';
-import '../content.dart';
+import 'package:start_app_frontend/content/todo/display.dart';
+import 'package:start_app_frontend/content/content.dart';
 
 class TodoContent extends ContentContainer {
   static const String collectionName = 'todo';

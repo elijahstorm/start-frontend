@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:start_app_frontend/firebase/firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:start_app_frontend/language/constants.dart';
 import 'package:start_app_frontend/firebase/auth.dart';
