@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/constants.dart';
-import 'package:start_app_frontend/language.dart';
+import 'package:start_frontend/constants.dart';
+import 'package:start_frontend/language.dart';
 
-import 'package:start_app_frontend/content/store/content.dart';
+import 'package:start_frontend/content/store/content.dart';
 
 class CartItem extends StatefulWidget {
   final StoreContent cartItem;

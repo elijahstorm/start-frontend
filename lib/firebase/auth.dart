@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 // import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
-import 'package:start_app_frontend/login/responder.dart';
+import 'package:start_frontend/login/responder.dart';
 
 class AuthApi {
   static Future<UserCredential> signInWithGoogle() async {

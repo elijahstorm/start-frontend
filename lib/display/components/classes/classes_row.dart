@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/classes/temp_class_content.dart';
-import 'package:start_app_frontend/display/components/classes/class_card.dart';
-import 'package:start_app_frontend/display/components/widgets/row_with_header.dart';
+import 'package:start_frontend/display/components/classes/temp_class_content.dart';
+import 'package:start_frontend/display/components/classes/class_card.dart';
+import 'package:start_frontend/display/components/widgets/row_with_header.dart';
 
 class ClassesRow extends StatelessWidget {
   final String name;

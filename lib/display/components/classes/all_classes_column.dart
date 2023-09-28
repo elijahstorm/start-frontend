@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/display/components/classes/temp_class_content.dart';
-import 'package:start_app_frontend/display/components/classes/classes_row.dart';
+import 'package:start_frontend/display/components/classes/temp_class_content.dart';
+import 'package:start_frontend/display/components/classes/classes_row.dart';
 
 class AllClassesColumn extends StatelessWidget {
   const AllClassesColumn({

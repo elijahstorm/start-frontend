@@ -2,16 +2,16 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/login/responder.dart';
-import 'package:start_app_frontend/login/welcome_page.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/login/responder.dart';
+import 'package:start_frontend/login/welcome_page.dart';
 import 'package:provider/provider.dart';
 
-import 'package:start_app_frontend/controllers/keys.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/login/user_state.dart';
-import 'package:start_app_frontend/login/login_data.dart';
+import 'package:start_frontend/controllers/keys.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/login/user_state.dart';
+import 'package:start_frontend/login/login_data.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/auth';

@@ -1,9 +1,9 @@
-import 'package:start_app_frontend/content/content.dart';
-import 'package:start_app_frontend/content/teams/content.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
-import 'package:start_app_frontend/content/notifications/content.dart';
-import 'package:start_app_frontend/content/todo/content.dart';
-import 'package:start_app_frontend/content/users/content.dart';
+import 'package:start_frontend/content/content.dart';
+import 'package:start_frontend/content/teams/content.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/content/notifications/content.dart';
+import 'package:start_frontend/content/todo/content.dart';
+import 'package:start_frontend/content/users/content.dart';
 
 class NotificationsApi {
   static NotificationHandler instance = NotificationHandler();

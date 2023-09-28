@@ -2,18 +2,18 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:start_app_frontend/firebase/firestore.dart';
-import 'package:start_app_frontend/firebase/storage.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/controllers/keys.dart';
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/display/components/widgets/editable.dart';
-import 'package:start_app_frontend/display/components/teams/vertical_user_list.dart';
-import 'package:start_app_frontend/display/components/widgets/alerts.dart';
+import 'package:start_frontend/firebase/firestore.dart';
+import 'package:start_frontend/firebase/storage.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/controllers/keys.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/display/components/widgets/editable.dart';
+import 'package:start_frontend/display/components/teams/vertical_user_list.dart';
+import 'package:start_frontend/display/components/widgets/alerts.dart';
 
-import 'package:start_app_frontend/content/teams/content.dart';
-import 'package:start_app_frontend/language/settings_keys.dart';
+import 'package:start_frontend/content/teams/content.dart';
+import 'package:start_frontend/language/settings_keys.dart';
 import 'package:provider/provider.dart';
 
 class TeamEditorDisplay extends StatelessWidget {

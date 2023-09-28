@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/content/files/content.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/content/files/content.dart';
 
 class RecentFiles extends StatelessWidget {
   const RecentFiles({

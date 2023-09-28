@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/pages/main/components/navbar_holder.dart';
+import 'package:start_frontend/display/pages/main/components/navbar_holder.dart';
 
 class StartAppNavbar extends StatefulWidget {
   final ValueNotifier stateIndex;

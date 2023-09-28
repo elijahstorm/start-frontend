@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/teams/user_profile_view.dart';
+import 'package:start_frontend/display/components/teams/user_profile_view.dart';
 
 import 'content.dart';
 

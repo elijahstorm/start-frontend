@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/language/language.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/settings_keys.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
-import 'package:start_app_frontend/firebase/firestore.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/settings_keys.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/firebase/firestore.dart';
 
-import 'package:start_app_frontend/login/responder.dart';
-import 'package:start_app_frontend/content/users/content.dart';
-import 'package:start_app_frontend/content/todo/content.dart';
+import 'package:start_frontend/login/responder.dart';
+import 'package:start_frontend/content/users/content.dart';
+import 'package:start_frontend/content/todo/content.dart';
 
 class User {
   String name, id, icon, email;

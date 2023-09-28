@@ -1,6 +1,6 @@
 {
-    "name": "start_app_frontend",
-    "short_name": "start_app_frontend",
+    "name": "start_frontend",
+    "short_name": "start_frontend",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

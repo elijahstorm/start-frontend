@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/classes/temp_class_content.dart';
-import 'package:start_app_frontend/display/components/widgets/content_card.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/classes/temp_class_content.dart';
+import 'package:start_frontend/display/components/widgets/content_card.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class ClassCard extends StatelessWidget {
   final ClassContent theClass;

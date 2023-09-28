@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/language/settings_keys.dart';
+import 'package:start_frontend/language/settings_keys.dart';
 import 'package:provider/provider.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:intl/intl.dart';
 
-import 'package:start_app_frontend/display/components/calendar/focused_date.dart';
-import 'package:start_app_frontend/content/todo/cache.dart';
-import 'package:start_app_frontend/content/todo/content.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/display/components/calendar/events_builders.dart';
+import 'package:start_frontend/display/components/calendar/focused_date.dart';
+import 'package:start_frontend/content/todo/cache.dart';
+import 'package:start_frontend/content/todo/content.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/display/components/calendar/events_builders.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({

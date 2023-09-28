@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/controllers/responsive.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/display/pages/main/components/navbar_holder.dart';
+import 'package:start_frontend/controllers/responsive.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/display/pages/main/components/navbar_holder.dart';
 
 class SideMenu extends StatelessWidget {
   final ValueNotifier stateIndex;

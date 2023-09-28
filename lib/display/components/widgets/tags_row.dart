@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class ChipTagsRow extends StatelessWidget {
   final List<String> tags;

@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'package:start_app_frontend/content/users/content.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
-
-import 'display.dart';
-import '../content.dart';
+import 'package:start_frontend/content/users/content.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/content/notifications/display.dart';
+import 'package:start_frontend/content/content.dart';
 
 class NotificationContent extends ContentContainer {
   static const String collectionName = 'notos';

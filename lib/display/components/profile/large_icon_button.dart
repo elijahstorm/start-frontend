@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class LargeIconButton extends StatelessWidget {
   final IconData icon;

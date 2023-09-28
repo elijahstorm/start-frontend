@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/content/dashboard/content.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/content/dashboard/content.dart';
 
 class FileInfoCard extends StatelessWidget {
   const FileInfoCard({

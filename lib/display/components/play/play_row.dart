@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/play/temp_dance_play_content.dart';
-import 'package:start_app_frontend/display/components/play/play_card.dart';
-import 'package:start_app_frontend/display/components/widgets/row_with_header.dart';
+import 'package:start_frontend/display/components/play/temp_dance_play_content.dart';
+import 'package:start_frontend/display/components/play/play_card.dart';
+import 'package:start_frontend/display/components/widgets/row_with_header.dart';
 
 class DancePlayRow extends StatelessWidget {
   final String name;

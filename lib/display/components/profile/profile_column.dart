@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/display/components/profile/large_icon_button.dart';
-import 'package:start_app_frontend/display/components/profile/long_profile_tile.dart';
-import 'package:start_app_frontend/display/components/profile/progress_card.dart';
-import 'package:start_app_frontend/display/components/profile/temp_profile_content.dart';
-import 'package:start_app_frontend/display/components/widgets/content_card.dart';
-import 'package:start_app_frontend/display/components/widgets/row_with_header.dart';
-import 'package:start_app_frontend/display/components/widgets/short_column_with_header.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/profile/large_icon_button.dart';
+import 'package:start_frontend/display/components/profile/long_profile_tile.dart';
+import 'package:start_frontend/display/components/profile/progress_card.dart';
+import 'package:start_frontend/display/components/profile/temp_profile_content.dart';
+import 'package:start_frontend/display/components/widgets/content_card.dart';
+import 'package:start_frontend/display/components/widgets/row_with_header.dart';
+import 'package:start_frontend/display/components/widgets/short_column_with_header.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class ProfileColumn extends StatelessWidget {
   final ProfileContent profile;

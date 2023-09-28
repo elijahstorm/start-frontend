@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
 
 class IntroScreen extends StatelessWidget {
   final VoidCallback onFinished;

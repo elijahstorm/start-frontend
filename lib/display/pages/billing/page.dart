@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/widgets/backable_page.dart';
+import 'package:start_frontend/display/components/widgets/backable_page.dart';
 
 class BillingPage extends StatelessWidget {
   static const routeName = '/billing';

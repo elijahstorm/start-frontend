@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/language/art.dart';
+import 'package:start_frontend/language/art.dart';
 
 enum Painters {
   top,

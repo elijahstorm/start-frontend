@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:start_app_frontend/content/teams/content.dart';
+import 'package:start_frontend/content/teams/content.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import 'package:start_app_frontend/firebase/notos.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/content/todo/cache.dart';
-import 'package:start_app_frontend/content/todo/content.dart';
-import 'package:start_app_frontend/content/notifications/content.dart';
-import 'package:start_app_frontend/display/components/calendar/focused_date.dart';
-import 'package:start_app_frontend/display/components/widgets/alerts.dart';
-import 'package:start_app_frontend/display/components/widgets/skeleton.dart';
+import 'package:start_frontend/firebase/notos.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/content/todo/cache.dart';
+import 'package:start_frontend/content/todo/content.dart';
+import 'package:start_frontend/content/notifications/content.dart';
+import 'package:start_frontend/display/components/calendar/focused_date.dart';
+import 'package:start_frontend/display/components/widgets/alerts.dart';
+import 'package:start_frontend/display/components/widgets/skeleton.dart';
 
 class Todo extends StatelessWidget {
   const Todo({

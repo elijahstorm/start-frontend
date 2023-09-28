@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/widgets/avatars.dart';
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/content/users/content.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/widgets/avatars.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/content/users/content.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class UserAvatars extends CircleOverlappableAvatar {
   final UserContent user;

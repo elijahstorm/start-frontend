@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/language/constants.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/content/content.dart';
-import 'package:start_app_frontend/controllers/keys.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/content/content.dart';
+import 'package:start_frontend/controllers/keys.dart';
+import 'package:start_frontend/language/language.dart';
 
 typedef EditableContentChangedSignal = List<void Function()>;
 

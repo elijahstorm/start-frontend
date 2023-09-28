@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
-import 'package:start_app_frontend/controllers/responsive.dart';
+import 'package:start_frontend/controllers/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/language/language.dart';
 import 'package:provider/provider.dart';
 
-import 'package:start_app_frontend/display/components/widgets/avatars.dart';
-import 'package:start_app_frontend/display/pages/search/page.dart';
-import 'package:start_app_frontend/display/pages/debug/page.dart';
-import 'package:start_app_frontend/login/user_state.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/widgets/avatars.dart';
+import 'package:start_frontend/display/pages/search/page.dart';
+import 'package:start_frontend/display/pages/debug/page.dart';
+import 'package:start_frontend/login/user_state.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class Header extends StatefulWidget {
   final String title;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/content/users/content.dart';
-import 'package:start_app_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/content/users/content.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
 
 class GenericFloatingButton extends StatelessWidget {
   final VoidCallback onTap;

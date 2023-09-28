@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/content/content.dart';
-import 'package:start_app_frontend/controllers/keys.dart';
+import 'package:start_frontend/content/content.dart';
+import 'package:start_frontend/controllers/keys.dart';
 
 class ContentErrors {
   static String lastRetriedId = '';

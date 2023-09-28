@@ -2,14 +2,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import 'package:start_app_frontend/firebase/core.dart';
-import 'package:start_app_frontend/login/user_state.dart';
-import 'package:start_app_frontend/login/responder.dart';
+import 'package:start_frontend/firebase/core.dart';
+import 'package:start_frontend/login/user_state.dart';
+import 'package:start_frontend/login/responder.dart';
 
-import 'package:start_app_frontend/language/theme.dart';
-import 'package:start_app_frontend/language/routes.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/controllers/keys.dart';
+import 'package:start_frontend/language/theme.dart';
+import 'package:start_frontend/language/routes.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/controllers/keys.dart';
 
 void main() async {
   if (!kReleaseMode && AppDebugLogin.bypass) {

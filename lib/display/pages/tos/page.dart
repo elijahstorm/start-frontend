@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/widgets/error.dart';
+import 'package:start_frontend/display/components/widgets/error.dart';
 
 class TermsOfService extends StatelessWidget {
   const TermsOfService({

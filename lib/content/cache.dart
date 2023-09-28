@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-import 'package:start_app_frontend/firebase/firestore.dart';
+import 'package:start_frontend/firebase/firestore.dart';
 
 import 'content.dart';
 

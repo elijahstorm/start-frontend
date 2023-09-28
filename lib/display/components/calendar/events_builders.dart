@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
-import 'package:start_app_frontend/content/todo/content.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/theme.dart';
+import 'package:start_frontend/content/todo/content.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/theme.dart';
 
 class EventsFlowerBuilder extends StatelessWidget {
   final List<TodoContent> events;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-import 'package:start_app_frontend/display/components/widgets/avatars.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/widgets/avatars.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class Loading extends StatelessWidget {
   const Loading({

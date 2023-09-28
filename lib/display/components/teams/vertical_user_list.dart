@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/content/teams/content.dart';
+import 'package:start_frontend/content/teams/content.dart';
 
-import 'package:start_app_frontend/display/components/widgets/skeleton.dart';
+import 'package:start_frontend/display/components/widgets/skeleton.dart';
 
-import 'package:start_app_frontend/content/users/content.dart';
+import 'package:start_frontend/content/users/content.dart';
 
-import 'package:start_app_frontend/display/components/teams/horizontal_user_card.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/display/components/teams/horizontal_user_card.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
 
 typedef FutureUser = Future<UserContent?>;
 

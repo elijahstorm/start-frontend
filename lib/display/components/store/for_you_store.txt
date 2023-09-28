@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
-import 'package:start_app_frontend/responsive.dart';
-import 'package:start_app_frontend/constants.dart';
+import 'package:start_frontend/responsive.dart';
+import 'package:start_frontend/constants.dart';
 
-import 'package:start_app_frontend/display/components/store/cart_item.dart';
+import 'package:start_frontend/display/components/store/cart_item.dart';
 
-import 'package:start_app_frontend/content/store/cache.dart';
+import 'package:start_frontend/content/store/cache.dart';
 
 class ForYouStore extends StatelessWidget {
   const ForYouStore({

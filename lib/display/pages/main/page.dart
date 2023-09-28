@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/content/teams/content.dart';
-import 'package:start_app_frontend/display/screens/play/screen.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/content/teams/content.dart';
+import 'package:start_frontend/display/screens/play/screen.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
 import 'package:provider/provider.dart';
 
-import 'package:start_app_frontend/controllers/menu_controller.dart';
-import 'package:start_app_frontend/controllers/responsive.dart';
-import 'package:start_app_frontend/display/pages/main/components/bottom_nav.dart';
-import 'package:start_app_frontend/display/pages/main/components/side_menu.dart';
-import 'package:start_app_frontend/display/pages/main/components/navbar_holder.dart';
+import 'package:start_frontend/controllers/menu_controller.dart';
+import 'package:start_frontend/controllers/responsive.dart';
+import 'package:start_frontend/display/pages/main/components/bottom_nav.dart';
+import 'package:start_frontend/display/pages/main/components/side_menu.dart';
+import 'package:start_frontend/display/pages/main/components/navbar_holder.dart';
 
-import 'package:start_app_frontend/display/screens/calendar/screen.dart';
-import 'package:start_app_frontend/display/screens/stats/screen.dart';
-import 'package:start_app_frontend/display/screens/teams/screen.dart';
-import 'package:start_app_frontend/display/screens/classes/screen.dart';
-import 'package:start_app_frontend/display/screens/profile/screen.dart';
+import 'package:start_frontend/display/screens/calendar/screen.dart';
+import 'package:start_frontend/display/screens/stats/screen.dart';
+import 'package:start_frontend/display/screens/teams/screen.dart';
+import 'package:start_frontend/display/screens/classes/screen.dart';
+import 'package:start_frontend/display/screens/profile/screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({

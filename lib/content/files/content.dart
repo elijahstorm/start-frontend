@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'display.dart';
-import '../content.dart';
+import 'package:start_frontend/content/files/display.dart';
+import 'package:start_frontend/content/content.dart';
 
 class FileContent extends ContentContainer {
   static const String collectionName = 'files';

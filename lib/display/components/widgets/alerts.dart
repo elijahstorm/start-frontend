@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class AlertTextDialog extends StatelessWidget {
   final String alert;

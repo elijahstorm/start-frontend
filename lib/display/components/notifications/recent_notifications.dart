@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/content/users/content.dart';
+import 'package:start_frontend/content/users/content.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-import 'package:start_app_frontend/content/notifications/content.dart';
-import 'package:start_app_frontend/content/notifications/cache.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/content/notifications/content.dart';
+import 'package:start_frontend/content/notifications/cache.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
 
 class RecentNotifications extends StatelessWidget {
   final _notificationContainerSize = 50.0;

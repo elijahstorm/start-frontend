@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/firebase/core.dart';
+import 'package:start_frontend/firebase/core.dart';
 import 'package:provider/provider.dart';
 
-import 'package:start_app_frontend/controllers/menu_controller.dart';
-import 'package:start_app_frontend/display/pages/main/page.dart';
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/display/components/widgets/error.dart';
-import 'package:start_app_frontend/login/user_state.dart';
+import 'package:start_frontend/controllers/menu_controller.dart';
+import 'package:start_frontend/display/pages/main/page.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/display/components/widgets/error.dart';
+import 'package:start_frontend/login/user_state.dart';
 
 class UiManager extends StatefulWidget {
   static const routeName = '/main';

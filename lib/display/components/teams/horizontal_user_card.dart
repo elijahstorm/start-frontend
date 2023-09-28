@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/content/users/content.dart';
-import 'package:start_app_frontend/display/components/teams/team_user_avatars.dart';
-import 'package:start_app_frontend/display/components/widgets/buttons.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/content/users/content.dart';
+import 'package:start_frontend/display/components/teams/team_user_avatars.dart';
+import 'package:start_frontend/display/components/widgets/buttons.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class HorizontalUserCard extends StatelessWidget {
   final UserContent user;

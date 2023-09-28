@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/display/components/profile/profile_column.dart';
-import 'package:start_app_frontend/display/components/profile/temp_profile_content.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/display/components/profile/profile_column.dart';
+import 'package:start_frontend/display/components/profile/temp_profile_content.dart';
+import 'package:start_frontend/language/language.dart';
 import 'package:provider/provider.dart';
 
-import 'package:start_app_frontend/display/components/widgets/responsive_screen.dart';
+import 'package:start_frontend/display/components/widgets/responsive_screen.dart';
 
-import 'package:start_app_frontend/content/dashboard/cache.dart';
-import 'package:start_app_frontend/content/users/cache.dart';
-import 'package:start_app_frontend/content/teams/cache.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
+import 'package:start_frontend/content/dashboard/cache.dart';
+import 'package:start_frontend/content/users/cache.dart';
+import 'package:start_frontend/content/teams/cache.dart';
+import 'package:start_frontend/firebase/auth.dart';
 
 class ProfileScreen extends StatelessWidget {
   static const screenName = 'profile';

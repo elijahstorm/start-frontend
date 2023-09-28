@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/widgets/error.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/display/components/widgets/error.dart';
+import 'package:start_frontend/language/language.dart';
 
 class PageNotFound extends StatelessWidget {
   const PageNotFound({

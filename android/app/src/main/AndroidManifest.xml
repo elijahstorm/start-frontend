@@ -1,7 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.start_app_frontend">
-   <application
-        android:label="start_app_frontend"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="start_frontend"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

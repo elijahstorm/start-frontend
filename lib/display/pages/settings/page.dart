@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/pages/settings/components/settings_side.dart';
-import 'package:start_app_frontend/display/pages/settings/components/settings_main.dart';
-import 'package:start_app_frontend/display/components/widgets/responsive_content.dart';
-import 'package:start_app_frontend/login/user_state.dart';
+import 'package:start_frontend/display/pages/settings/components/settings_side.dart';
+import 'package:start_frontend/display/pages/settings/components/settings_main.dart';
+import 'package:start_frontend/display/components/widgets/responsive_content.dart';
+import 'package:start_frontend/login/user_state.dart';
 import 'package:provider/provider.dart';
 
 class AccountSettingsPage extends StatelessWidget {

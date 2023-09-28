@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/meetup/temp_crew_content.dart';
-import 'package:start_app_frontend/display/components/widgets/tall_content_card.dart';
+import 'package:start_frontend/display/components/meetup/temp_crew_content.dart';
+import 'package:start_frontend/display/components/widgets/tall_content_card.dart';
 
 class DanceCrewCard extends StatelessWidget {
   final DanceCrewContent crew;

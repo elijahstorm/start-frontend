@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/firebase/firestore.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/firebase/firestore.dart';
 
 class ContentStreamBuilder extends StatelessWidget {
   final Widget Function(Map<String, dynamic>) success;

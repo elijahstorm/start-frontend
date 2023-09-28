@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/meetup/temp_location_content.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/meetup/temp_location_content.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class SmallLocationTile extends StatelessWidget {
   final LocationContent location;

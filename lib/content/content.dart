@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/firebase/firestore.dart';
-import 'package:start_app_frontend/content/errors.dart';
+import 'package:start_frontend/firebase/firestore.dart';
+import 'package:start_frontend/content/errors.dart';
 
 enum CONTENT {
   none,

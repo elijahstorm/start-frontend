@@ -1,4 +1,4 @@
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class ResponseData {
   String user, pass, provider;

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/widgets/skeleton.dart';
-import 'package:start_app_frontend/display/components/widgets/dividers.dart';
-import 'package:start_app_frontend/display/components/widgets/editable.dart';
-import 'package:start_app_frontend/language/settings_keys.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/language/theme.dart';
+import 'package:start_frontend/display/components/widgets/skeleton.dart';
+import 'package:start_frontend/display/components/widgets/dividers.dart';
+import 'package:start_frontend/display/components/widgets/editable.dart';
+import 'package:start_frontend/language/settings_keys.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/language/theme.dart';
 
 class DashSettingsMain extends StatelessWidget {
   const DashSettingsMain({

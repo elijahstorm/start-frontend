@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/content/stream.dart';
+import 'package:start_frontend/content/stream.dart';
 import 'package:provider/provider.dart';
 import 'package:number_slide_animation/number_slide_animation.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
-import 'package:start_app_frontend/login/user_state.dart';
-import 'package:start_app_frontend/display/components/widgets/error.dart';
-import 'package:start_app_frontend/firebase/firestore.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
-import 'package:start_app_frontend/display/components/teams/team_user_avatars.dart';
-import 'package:start_app_frontend/display/components/widgets/border_display.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/login/user_state.dart';
+import 'package:start_frontend/display/components/widgets/error.dart';
+import 'package:start_frontend/firebase/firestore.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/display/components/teams/team_user_avatars.dart';
+import 'package:start_frontend/display/components/widgets/border_display.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/language/constants.dart';
 
-import 'package:start_app_frontend/content/todo/content.dart';
-import 'package:start_app_frontend/content/users/content.dart';
+import 'package:start_frontend/content/todo/content.dart';
+import 'package:start_frontend/content/users/content.dart';
 
 class UserProfileView extends StatelessWidget {
   final String userId;

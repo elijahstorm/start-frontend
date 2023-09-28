@@ -3,8 +3,8 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/settings_keys.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/settings_keys.dart';
 
 class ThemeSwitcher extends StatelessWidget {
   static bool darkModeEnabled = false;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/language/language.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:start_app_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
 
 class SettingsKeyValues {
   static const String settingsCalendarEventType = 'calendarEventType';

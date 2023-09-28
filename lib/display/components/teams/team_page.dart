@@ -1,13 +1,13 @@
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/display/components/animations/fade_in_incrementable.dart';
-import 'package:start_app_frontend/display/components/widgets/slivers.dart';
-import 'package:start_app_frontend/display/components/calendar/team_calendar.dart';
-import 'package:start_app_frontend/display/components/teams/team_user_avatars.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/animations/fade_in_incrementable.dart';
+import 'package:start_frontend/display/components/widgets/slivers.dart';
+import 'package:start_frontend/display/components/calendar/team_calendar.dart';
+import 'package:start_frontend/display/components/teams/team_user_avatars.dart';
+import 'package:start_frontend/language/constants.dart';
 
-import 'package:start_app_frontend/content/teams/content.dart';
+import 'package:start_frontend/content/teams/content.dart';
 
 class TeamPageDisplay extends StatelessWidget {
   final TeamContent content;

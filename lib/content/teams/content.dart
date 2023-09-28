@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_svg/svg.dart';
-
-import 'package:start_app_frontend/content/users/content.dart';
-import 'package:start_app_frontend/controllers/keys.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
-import 'package:start_app_frontend/firebase/firestore.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/login/user_state.dart';
 import 'package:provider/provider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'display.dart';
-import 'editor.dart';
-import '../content.dart';
-
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/content/users/content.dart';
+import 'package:start_frontend/controllers/keys.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/firebase/firestore.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/login/user_state.dart';
+import 'package:start_frontend/content/teams/display.dart';
+import 'package:start_frontend/content/teams/editor.dart';
+import 'package:start_frontend/content/content.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class TeamContent extends ContentContainer {
   static const String collectionName = 'teams';

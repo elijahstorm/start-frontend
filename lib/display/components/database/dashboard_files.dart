@@ -1,13 +1,13 @@
-import 'package:start_app_frontend/controllers/responsive.dart';
+import 'package:start_frontend/controllers/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/display/components/widgets/alerts.dart';
+import 'package:start_frontend/display/components/widgets/alerts.dart';
 import 'package:provider/provider.dart';
 
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/content/dashboard/cache.dart';
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/display/components/database/file_info_card.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/content/dashboard/cache.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/display/components/database/file_info_card.dart';
 
 class DashboardFiles extends StatelessWidget {
   const DashboardFiles({

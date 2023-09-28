@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
-import 'package:start_app_frontend/display/components/widgets/painters.dart';
-import 'package:start_app_frontend/display/components/widgets/slivers.dart';
+import 'package:start_frontend/display/components/widgets/painters.dart';
+import 'package:start_frontend/display/components/widgets/slivers.dart';
 
 class BorderDisplay extends StatelessWidget {
   final List<Widget> header;

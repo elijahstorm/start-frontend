@@ -2,8 +2,8 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:firebase_core/firebase_core.dart' as firebase_core;
 
-import 'package:start_app_frontend/firebase/auth.dart';
-import 'package:start_app_frontend/firebase/images.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/firebase/images.dart';
 
 typedef StorageFile = File;
 

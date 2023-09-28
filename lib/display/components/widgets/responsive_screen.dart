@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/controllers/responsive.dart';
+import 'package:start_frontend/controllers/responsive.dart';
 
-import 'package:start_app_frontend/display/components/widgets/header.dart';
-import 'package:start_app_frontend/language/language.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/widgets/header.dart';
+import 'package:start_frontend/language/language.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class ResponsiveScreen extends StatelessWidget {
   final String header;

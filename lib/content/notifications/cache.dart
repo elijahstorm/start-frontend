@@ -1,8 +1,8 @@
 import '../cache.dart';
 import 'content.dart';
 
-import 'package:start_app_frontend/firebase/firestore.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
+import 'package:start_frontend/firebase/firestore.dart';
+import 'package:start_frontend/firebase/auth.dart';
 
 class NotificationCache extends ContentCache<NotificationContent> {
   NotificationCache.friends();

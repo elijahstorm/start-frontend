@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/controllers/responsive.dart';
-import 'package:start_app_frontend/language/constants.dart';
-import 'package:start_app_frontend/display/components/animations/blinking_content.dart';
-import 'package:start_app_frontend/display/components/animations/loading.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/controllers/responsive.dart';
+import 'package:start_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/animations/blinking_content.dart';
+import 'package:start_frontend/display/components/animations/loading.dart';
+import 'package:start_frontend/language/language.dart';
 
 class NoContentPlaceholder extends StatelessWidget {
   const NoContentPlaceholder({

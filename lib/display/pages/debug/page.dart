@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/controllers/keys.dart';
+import 'package:start_frontend/controllers/keys.dart';
 
-import 'package:start_app_frontend/display/components/widgets/error.dart';
+import 'package:start_frontend/display/components/widgets/error.dart';
 
 class DebugTestingPage extends StatelessWidget {
   static const String routeName = '/debug';

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_app_frontend/controllers/ui_manager.dart';
-import 'package:start_app_frontend/display/pages/404/page.dart';
-import 'package:start_app_frontend/display/pages/debug/page.dart';
-import 'package:start_app_frontend/display/pages/settings/page.dart';
-import 'package:start_app_frontend/display/pages/permissions/page.dart';
-import 'package:start_app_frontend/display/pages/search/page.dart';
-import 'package:start_app_frontend/display/pages/billing/page.dart';
+import 'package:start_frontend/controllers/ui_manager.dart';
+import 'package:start_frontend/display/pages/404/page.dart';
+import 'package:start_frontend/display/pages/debug/page.dart';
+import 'package:start_frontend/display/pages/settings/page.dart';
+import 'package:start_frontend/display/pages/permissions/page.dart';
+import 'package:start_frontend/display/pages/search/page.dart';
+import 'package:start_frontend/display/pages/billing/page.dart';
 
 class Routes {
   static String initalRoute = UiManager.routeName;

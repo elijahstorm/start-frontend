@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:start_app_frontend/display/components/teams/user_profile_view.dart';
-import 'package:start_app_frontend/display/components/widgets/error.dart';
-import 'package:start_app_frontend/firebase/auth.dart';
-import 'package:start_app_frontend/login/user_state.dart';
-import 'package:start_app_frontend/language/language.dart';
+import 'package:start_frontend/display/components/teams/user_profile_view.dart';
+import 'package:start_frontend/display/components/widgets/error.dart';
+import 'package:start_frontend/firebase/auth.dart';
+import 'package:start_frontend/login/user_state.dart';
+import 'package:start_frontend/language/language.dart';
 
 class DashboardProfileDisplay extends StatelessWidget {
   const DashboardProfileDisplay({

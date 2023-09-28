@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:start_app_frontend/display/components/meetup/dance_crew_card.dart';
-import 'package:start_app_frontend/display/components/meetup/location_card.dart';
+import 'package:start_frontend/display/components/meetup/dance_crew_card.dart';
+import 'package:start_frontend/display/components/meetup/location_card.dart';
 
-import 'package:start_app_frontend/display/components/meetup/location_tile.dart';
-import 'package:start_app_frontend/display/components/meetup/small_meetup_tile.dart';
-import 'package:start_app_frontend/display/components/meetup/temp_crew_content.dart';
-import 'package:start_app_frontend/display/components/meetup/temp_location_content.dart';
-import 'package:start_app_frontend/display/components/widgets/row_with_header.dart';
-import 'package:start_app_frontend/display/components/widgets/short_column_with_header.dart';
-import 'package:start_app_frontend/language/constants.dart';
+import 'package:start_frontend/display/components/meetup/location_tile.dart';
+import 'package:start_frontend/display/components/meetup/small_meetup_tile.dart';
+import 'package:start_frontend/display/components/meetup/temp_crew_content.dart';
+import 'package:start_frontend/display/components/meetup/temp_location_content.dart';
+import 'package:start_frontend/display/components/widgets/row_with_header.dart';
+import 'package:start_frontend/display/components/widgets/short_column_with_header.dart';
+import 'package:start_frontend/language/constants.dart';
 
 class MeetupColumn extends StatelessWidget {
   final List<int> selected = const [0];
