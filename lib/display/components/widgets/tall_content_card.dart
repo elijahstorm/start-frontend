@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:start_frontend/display/components/widgets/tags_row.dart';
 import 'package:start_frontend/language/constants.dart';
 
 class TallContentCard extends StatelessWidget {

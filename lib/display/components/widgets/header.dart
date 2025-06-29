@@ -117,7 +117,7 @@ class _HeaderState extends State<Header> with TickerProviderStateMixin {
           children: [
             Text(
               widget.title,
-              style: Theme.of(context).textTheme.headline5?.copyWith(
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
             ),
@@ -171,7 +171,7 @@ class HeaderAction extends StatelessWidget {
             : action!(),
         child: Icon(
           icon,
-          color: Theme.of(context).textTheme.bodyText1?.color,
+          color: Theme.of(context).textTheme.bodyLarge?.color,
           size: Constants.defaultPadding * 2,
         ),
       );

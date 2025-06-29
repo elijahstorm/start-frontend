@@ -48,7 +48,9 @@ class TeamEditorDisplay extends StatelessWidget {
                     file,
                     onError: (error) {
                       if (GlobalKeys.rootScaffoldMessengerKey.currentState ==
-                          null) return;
+                          null) {
+                        return;
+                      }
                       GlobalKeys.rootScaffoldMessengerKey.currentState!
                           .showSnackBar(
                         SnackBar(
@@ -93,7 +95,9 @@ class TeamEditorDisplay extends StatelessWidget {
                 onTap: () async => await StorageApi.file.gallery(
                   onError: (error) {
                     if (GlobalKeys.rootScaffoldMessengerKey.currentState ==
-                        null) return;
+                        null) {
+                      return;
+                    }
                     GlobalKeys.rootScaffoldMessengerKey.currentState!
                         .showSnackBar(
                       SnackBar(
@@ -212,13 +216,13 @@ class TeamEditorDisplay extends StatelessWidget {
                     onTap: () => Future.value(0),
                     editor: (d) => Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
+                        const Padding(
+                          padding: EdgeInsets.only(
                             bottom: Constants.defaultPadding,
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.add_circle_outline,
                                 size: Constants.defaultPadding * 2,
@@ -258,9 +262,9 @@ class TeamEditorDisplay extends StatelessWidget {
                                 minHeight: Constants.defaultPadding * 2,
                               ),
                               alignment: Alignment.center,
-                              child: Row(
+                              child: const Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
+                                children: [
                                   Icon(
                                     Icons.edit,
                                     color: Constants.bgColorLight,

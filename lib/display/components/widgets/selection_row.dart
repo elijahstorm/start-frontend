@@ -29,7 +29,7 @@ class SelectionRow extends StatelessWidget {
                   padding: const EdgeInsets.all(Constants.defaultPadding),
                   child: Text(
                     name,
-                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                   ),

@@ -35,7 +35,7 @@ class CardButton extends StatelessWidget {
               Icon(icon),
               Text(
                 name,
-                style: Theme.of(context).textTheme.headline6?.copyWith(
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontSize: 16,
                     ),
               ),

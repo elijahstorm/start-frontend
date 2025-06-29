@@ -8,9 +8,9 @@ class AllClassesColumn extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Column(
+  Widget build(BuildContext context) => const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
+        children: [
           ClassesRow(
             name: 'Top 10 Hits',
             classes: [

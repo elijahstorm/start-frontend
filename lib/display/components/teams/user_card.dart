@@ -48,7 +48,7 @@ class UserCard extends StatelessWidget {
                       style: TextStyle(
                         color: Theme.of(context)
                             .textTheme
-                            .subtitle1!
+                            .titleMedium!
                             .color!
                             .withOpacity(.8),
                       ),

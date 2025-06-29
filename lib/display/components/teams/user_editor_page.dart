@@ -46,7 +46,9 @@ class UserEditorDisplay extends StatelessWidget {
                     file,
                     onError: (error) {
                       if (GlobalKeys.rootScaffoldMessengerKey.currentState ==
-                          null) return;
+                          null) {
+                        return;
+                      }
                       GlobalKeys.rootScaffoldMessengerKey.currentState!
                           .showSnackBar(
                         SnackBar(
@@ -90,7 +92,9 @@ class UserEditorDisplay extends StatelessWidget {
                 onTap: () async => await StorageApi.file.gallery(
                   onError: (error) {
                     if (GlobalKeys.rootScaffoldMessengerKey.currentState ==
-                        null) return;
+                        null) {
+                      return;
+                    }
                     GlobalKeys.rootScaffoldMessengerKey.currentState!
                         .showSnackBar(
                       SnackBar(

@@ -296,7 +296,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 GestureDetector(
                   onTap: () {
                     if (GlobalKeys.rootScaffoldMessengerKey.currentState ==
-                        null) return;
+                        null) {
+                      return;
+                    }
                     GlobalKeys.rootScaffoldMessengerKey.currentState!
                         .showSnackBar(const SnackBar(
                       content: Text('Sorry, this button doesn\'t work yet'),
@@ -330,7 +332,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 GestureDetector(
                   onTap: () {
                     if (GlobalKeys.rootScaffoldMessengerKey.currentState ==
-                        null) return;
+                        null) {
+                      return;
+                    }
                     GlobalKeys.rootScaffoldMessengerKey.currentState!
                         .showSnackBar(const SnackBar(
                       content: Text('Sorry, this button doesn\'t work yet'),
@@ -364,7 +368,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 GestureDetector(
                   onTap: () {
                     if (GlobalKeys.rootScaffoldMessengerKey.currentState ==
-                        null) return;
+                        null) {
+                      return;
+                    }
                     GlobalKeys.rootScaffoldMessengerKey.currentState!
                         .showSnackBar(const SnackBar(
                       content: Text('Sorry, this button doesn\'t work yet'),

@@ -65,7 +65,7 @@ class _StartAppNavbarState extends State<StartAppNavbar> {
       onTap: _updateState,
       items: items,
       selectedItemColor: Theme.of(context).primaryColor,
-      unselectedItemColor: Theme.of(context).textTheme.headline4?.color,
+      unselectedItemColor: Theme.of(context).textTheme.headlineMedium?.color,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       showUnselectedLabels: true,
       //       elevation: 0,

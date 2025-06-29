@@ -99,15 +99,15 @@ class ProfileColumn extends StatelessWidget {
                 ),
               ),
             ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
+          const Padding(
+            padding: EdgeInsets.symmetric(
               horizontal: Constants.defaultPadding * 2,
               vertical: Constants.defaultPadding,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 LargeIconButton(
                   icon: Icons.favorite_border,
                   title: 'Favorites',
